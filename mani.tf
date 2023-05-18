@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "us-west-1"
 }
 
 resource "aws_instance" "example" {
@@ -11,5 +11,5 @@ resource "aws_instance" "example" {
 }
 resource "aws_s3_bucket" "my_bucket" {
   bucket = "terraform-jenkins"  
-  region = "us-east-1"
+  
 }
