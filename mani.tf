@@ -9,3 +9,6 @@ resource "aws_instance" "example" {
     Name = "terraform-instance"
   }
 }
+resource "aws_s3_bucket" "my_bucket" {
+  bucket = "terraform-jenkins"  # Replace with your desired bucket name
+}
