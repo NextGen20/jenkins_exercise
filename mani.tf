@@ -10,14 +10,14 @@ resource "aws_instance" "example" {
     Name = "terraform-instance"
   }
 }
-resource "aws_s3_bucket" "my_bucket" {
-  bucket = "terr-jenk"
-}
+# resource "aws_s3_bucket" "my_bucket" {
+#   bucket = "terr-jenk"
+# }
 
-resource "aws_s3_bucket_public_access_block" "block" {
-  bucket = aws_s3_bucket.my_bucket.id
+# resource "aws_s3_bucket_public_access_block" "block" {
+#   bucket = aws_s3_bucket.my_bucket.id
 
-  block_public_acls       = false
-  block_public_policy     = false
+#   block_public_acls       = false
+#   block_public_policy     = false
   
-}
+# }
