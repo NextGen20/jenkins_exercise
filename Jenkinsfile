@@ -21,7 +21,7 @@ pipeline {
         stage('AWS S3 Upload') {
             steps {
                 withAWS(credentials: 'aws-key', region: 'us-east-1') {
-                s3Upload(bucket: 'terraform-jenkins', includePathPattern: '*/graph.png')
+                s3Upload(bucket: 'terr-jenk', includePathPattern: '*/graph.png')
                 }
             }
         }

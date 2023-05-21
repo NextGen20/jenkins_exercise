@@ -11,7 +11,7 @@ resource "aws_instance" "example" {
   }
 }
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "terraform-jenkins"
+  bucket = "terr-jenk"
 }
 
 resource "aws_s3_bucket_public_access_block" "block" {
