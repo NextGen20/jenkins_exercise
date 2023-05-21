@@ -19,8 +19,7 @@ pipeline {
         stage('AWS S3 Upload') {
             steps {
                 withAWS(credentials: 'aws-key', region: 'us-east-1') {
-                s3Upload(bucket: 'jenkins-sqlabs-amitb', path: 'project1/', includePathPattern: '*/graph.png')
-                
+                s3Upload(bucket: 'terraform-jenkins', includePathPattern: '*/graph.png')
                 }
             }
         }
