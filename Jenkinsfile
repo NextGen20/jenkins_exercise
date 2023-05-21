@@ -11,11 +11,13 @@ pipeline {
                 sh 'terraform apply --auto-approve'
             }
         }
-        stage('Env Graph')
-        steps {
+        stage('Env Graph') {
+             steps {
             sh 'terraform graph -draw-cycles > graph.dot'
             sh 'dot -Tpng graph.dot -o graph.png'
         }
+        }
+       
         stage('AWS S3 Upload') {
             steps {
                 withAWS(credentials: 'aws-key', region: 'us-east-1') {
